@@ -1,4 +1,81 @@
-html {
-  background: #f2f1f4;
+body {
+  background: #f8f8f8;
   color: #19171c;
+  padding: 0;
+  margin: 0;
+  font-family: helvetica;
+  font-weight: 200;
+}
+ .description {
+   display: none;
+ }
+
+ .active + .description {
+   display: block;
+ }
+
+ .accordion {
+   display: flex;
+   flex-direction: column;
+   width: 60%;
+   text-align: center;
+   margin: auto;
+   padding-top: 50px;
+   height: 60vw;
+ }
+
+ h1 {
+   font-size: 35px;
+   font-weight: 200;
+   margin-bottom: 60px;
+ }
+
+ p {
+   font-size: 15px;
+ }
+
+ .title {
+   font-size: 22px;
+   padding: 10px;
+   text-align: left;
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .description {
+   padding: 10px;
+   text-align: left;
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .title:hover {
+    background: red;
+    opacity: 0.2;
+    color: white;
+}
+
+ .title::before {
+   content: "add_circle_outline";
+   font-family: 'Material Icons';
+   padding-right: 10px;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 15px;
+   line-height: 1;
+   letter-spacing: normal;
+   text-transform: none;
+   display: inline-block;
+   white-space: nowrap;
+   word-wrap: normal;
+   direction: ltr;
+   -webkit-font-feature-settings: 'liga';
+   -webkit-font-smoothing: antialiased;
+ }
+
+.active::before {
+  content: "remove_circle_outline";
+  padding-right: 10px;
 }
